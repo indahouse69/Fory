@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pour Yasmine 💛</title>
+
+  <style>
+
+    :root{
+
+      --bg1:#0f172a;
+
+      --bg2:#1d4ed8;
+
+      --card: rgba(255,255,255,0.08);
+
+      --text:#e5e7eb;
+
+      --muted:rgba(229,231,235,0.75);
+
+      --accent:#f59e0b;
+
+    }
+
+    *{box-sizing:border-box;}
+
+    html{
+
+      min-height:100%;
+
+      overflow-x:hidden;
+
+      scroll-behavior:smooth;
+
+    }
+
+    body{
+
+      margin:0;
+
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+      color:var(--text);
+
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(245,158,11,0.25), transparent 60%),
+
+                  radial-gradient(900px 500px at 80% 20%, rgba(29,78,216,0.35), transparent 55%),
+
+                  linear-gradient(135deg, var(--bg1), #050816);
+
+      min-height:100vh;
+
+      min-height:100dvh;
+
+      display:flex;
+
+      align-items:flex-start;
+
+      justify-content:center;
+
+      padding:24px;
+
+      overflow-x:hidden;
+
+      overflow-y:auto;
+
+    }
+
+    .wrap{
+
+      width:min(980px, 100%);
+
+      display:grid;
+
+      grid-template-columns: 1.1fr 0.9fr;
+
+      gap:18px;
+
+      margin:auto;
+
+    }
+
+    @media (max-width: 860px){
+
+      .wrap{
+
+        grid-template-columns:1fr;
+
+        margin:0 auto;
+
+      }
+
+    }
+
+    .card{
+
+      background:var(--card);
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      border-radius:18px;
+
+      padding:22px;
+
+      backdrop-filter: blur(10px);
+
+      box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+
+    }
+
+    h1{
+
+      margin:0;
+
+      font-size: clamp(26px, 3vw, 44px);
+
+      line-height:1.1;
+
+      letter-spacing:0.3px;
+
+    }
+
+    .subtitle{
+
+      margin-top:10px;
+
+      color:var(--muted);
+
+      font-size:16px;
+
+      line-height:1.6;
+
+    }
+
+    .highlight{
+
+      color: #fff;
+
+      position: relative;
+
+      display:inline-block;
+
+    }
+
+    .highlight::after{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+
+      bottom:-6px;
+
+      width:100%;
+
+      height:6px;
+
+      background: linear-gradient(90deg, rgba(245,158,11,0.85), rgba(245,158,11,0.05));
+
+      border-radius:999px;
+
+      z-index:-1;
+
+    }
+
+    .btns{
+
+      margin-top:18px;
+
+      display:flex;
+
+      gap:12px;
+
+      flex-wrap:wrap;
+
+    }
+
+    button, a.btn{
+
+      cursor:pointer;
+
+      border:none;
+
+      text-decoration:none;
+
+      padding:12px 16px;
+
+      border-radius:14px;
+
+      font-weight:700;
+
+      letter-spacing:0.2px;
+
+      transition: transform .15s ease, background .15s ease, opacity .15s ease;
+
+    }
+
+    .primary{
+
+      background: linear-gradient(135deg, rgba(245,158,11,0.95), rgba(245,158,11,0.65));
+
+      color:#1b1200;
+
+    }
+
+    .ghost{
+
+      background: rgba(255,255,255,0.10);
+
+      color: var(--text);
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+    }
+
+    button:active, a.btn:active{ transform: scale(0.99); }
+
+    button:hover, a.btn:hover{ opacity:0.95; transform: translateY(-1px); }
+
+    .heart{
+
+      width:100%;
+
+      min-height:300px;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      position:relative;
+
+      overflow:hidden;
+
+    }
+
+    .floating-hearts{
+
+      position:absolute;
+
+      inset:0;
+
+      pointer-events:none;
+
+      opacity:0.9;
+
+    }
+
+    .dot{
+
+      position:absolute;
+
+      width:10px;
+
+      height:10px;
+
+      background: rgba(245,158,11,0.9);
+
+      border-radius: 999px;
+
+      filter: blur(0.3px);
+
+      animation: floatUp 4.5s linear infinite;
+
+    }
+
+    .dot:nth-child(2){ width:14px; height:14px; left:20%; animation-duration:5.5s; opacity:0.75;}
+
+    .dot:nth-child(3){ width:8px; height:8px; left:75%; animation-duration:4.2s; opacity:0.65;}
+
+    .dot:nth-child(4){ width:12px; height:12px; left:55%; animation-duration:6.2s; opacity:0.6;}
+
+    .dot:nth-child(5){ width:9px; height:9px; left:35%; animation-duration:5.0s; opacity:0.7;}
+
+    @keyframes floatUp{
+
+      0%{ transform: translateY(110px) scale(0.9); }
+
+      100%{ transform: translateY(-20px) scale(1.15); }
+
+    }
+
+    .message{
+
+      font-size:16px;
+
+      color:var(--muted);
+
+      line-height:1.7;
+
+      margin-top:12px;
+
+    }
+
+    .quote{
+
+      background: rgba(255,255,255,0.07);
+
+      border: 1px dashed rgba(255,255,255,0.18);
+
+      border-radius:16px;
+
+      padding:16px;
+
+      margin-top:18px;
+
+    }
+
+    .name{
+
+      color: #fff;
+
+      font-weight:900;
+
+    }
+
+    .footer{
+
+      margin-top:16px;
+
+      color: rgba(229,231,235,0.6);
+
+      font-size:13px;
+
+    }
+
+    .pop{
+
+      margin-top:12px;
+
+      display:none;
+
+      padding:14px 16px;
+
+      border-radius:14px;
+
+      background: rgba(34,197,94,0.12);
+
+      border: 1px solid rgba(34,197,94,0.25);
+
+      color: rgba(209,250,229,0.95);
+
+    }
+
+    @media (max-width:480px){
+
+      body{
+
+        padding:14px;
+
+      }
+
+      .card{
+
+        padding:18px;
+
+      }
+
+      .btns{
+
+        gap:10px;
+
+      }
+
+      button, a.btn{
+
+        padding:12px 14px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <section class="card">
+
+      <h1>
+
+        Yasmine, tu es une
+
+        <span class="highlight">grande personne</span> 💛
+
+      </h1>
+
+      <p class="subtitle">
+
+        Je voulais te créer ce petit site juste pour toi…
+
+        pour te dire à quel point je te trouve spéciale.
+
+      </p>
+
+      <div class="btns">
+
+        <button class="primary" id="btnSurprise">Clique ici ✨</button>
+
+        <a class="btn ghost" href="#lettre">Ma lettre</a>
+
+      </div>
+
+      <div class="pop" id="pop">
+
+        Merci d’être toi. Je te respecte, je t’admire et je te veux du bonheur. 💛
+
+      </div>
+
+      <div class="quote" id="lettre">
+
+        <div class="message">
+
+          Yasmine,
+
+          <br /><br />
+
+          Je vois ta gentillesse, ton cœur, et ta façon de rendre la vie plus belle.
+
+          Tu inspires et tu apportes de la chaleur.
+
+          <br /><br />
+
+          Tu es précieuse, et je suis tellement chanceux de te connaître.
+
+          Continue d’être la merveilleuse personne que tu es.
+
+          <br /><br />
+
+          <span class="name">Je t’aime</span> 💛
+
+        </div>
+
+      </div>
+
+      <div class="footer">
+
+        Fait avec amour par Yassine.
+
+      </div>
+
+    </section>
+
+    <aside class="card heart" aria-label="Décoration">
+
+      <div class="floating-hearts">
+
+        <div class="dot" style="left:10%; top:85px;"></div>
+
+        <div class="dot" style="left:20%; top:95px;"></div>
+
+        <div class="dot" style="left:75%; top:110px;"></div>
+
+        <div class="dot" style="left:55%; top:92px;"></div>
+
+        <div class="dot" style="left:35%; top:105px;"></div>
+
+      </div>
+
+      <div style="text-align:center; z-index:1;">
+
+        <div style="font-size:64px;">💛</div>
+
+        <h2 style="margin:8px 0 6px; font-size:22px;">Toujours avec toi</h2>
+
+        <p style="margin:0; color:rgba(229,231,235,0.75); line-height:1.7;">
+
+          Une petite page, une grande intention.
+
+          <br/>
+
+          Pour te rappeler que tu comptes énormément.
+
+        </p>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script>
+
+    const btn = document.getElementById('btnSurprise');
+
+    const pop = document.getElementById('pop');
+
+    btn.addEventListener('click', () => {
+
+      pop.style.display = 'block';
+
+      btn.disabled = true;
+
+      btn.style.opacity = '0.7';
+
+      btn.textContent = 'C’est fait 💫';
+
+      setTimeout(() => {
+
+        btn.disabled = false;
+
+        btn.style.opacity = '1';
+
+        btn.textContent = 'Encore une fois ✨';
+
+        pop.style.display = 'none';
+
+      }, 3800);
+
+    });
+
+  </script>
+
+</body>
+
+</html>
